@@ -133,19 +133,20 @@ export function Header({ activeCategory }: { activeCategory?: string }) {
 
 
 
-          {/* Search – TRUE right aligned */}
-          <div className="hidden md:flex shrink-0">
-            <div className="relative">
-              <Input
-                type="search"
-                placeholder="Search"
-                onFocus={(e) => (e.target.placeholder = '')}
-                onBlur={(e) => (e.target.placeholder = 'Search')}
-                className="pl-10 pr-4 w-56 bg-secondary rounded-full"
-              />
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5" />
-            </div>
-          </div>
+         {/* Search – TRUE right aligned */}
+<div className="hidden md:flex shrink-0">
+  <div className="relative">
+    <Input
+      type="search"
+      placeholder="Search"
+      onFocus={(e) => (e.target.placeholder = '')}
+      onBlur={(e) => (e.target.placeholder = 'Search')}
+      className="pl-8 pr-3 w-44 bg-secondary rounded-full"
+    />
+    <Search className="absolute left-2.5 top-1/2 -translate-y-1/2 h-4 w-4" />
+  </div>
+</div>
+
 
           {/* Mobile */}
           <div className="md:hidden ml-auto flex items-center gap-2">
