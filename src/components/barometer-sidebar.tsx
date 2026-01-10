@@ -1,4 +1,3 @@
-
 "use client"
 
 import { TrendingUp } from "lucide-react"
@@ -20,7 +19,7 @@ import { BAROMETER_DATA } from "@/lib/data"
 const chartConfig = {
   heat: {
     label: "Heat",
-    color: "hsl(var(--primary))",
+    color: "#EC1B25",
   },
 }
 
@@ -29,10 +28,14 @@ export function BarometerSidebar() {
     <Card className="rounded-3xl border-none bg-secondary/50">
       <CardHeader>
         <div className="flex items-center gap-2">
-            <TrendingUp className="h-6 w-6" />
-            <CardTitle className="text-2xl font-bold font-headline">Tech Barometer</CardTitle>
+          <TrendingUp className="h-6 w-6" />
+          <CardTitle className="text-2xl font-bold font-headline">
+            Tech Barometer
+          </CardTitle>
         </div>
-        <CardDescription className="text-muted-foreground/80">What's hot in tech right now</CardDescription>
+        <CardDescription className="text-muted-foreground/80">
+          What's hot in tech right now
+        </CardDescription>
       </CardHeader>
       <CardContent>
         <ChartContainer config={chartConfig} className="w-full h-[250px]">
@@ -46,7 +49,11 @@ export function BarometerSidebar() {
               type="category"
               tickLine={false}
               axisLine={false}
-              tick={{ fill: "hsl(var(--foreground))", fontSize: 12, opacity: 0.8 }}
+              tick={{
+                fill: "hsl(var(--foreground))",
+                fontSize: 12,
+                opacity: 0.8,
+              }}
               width={100}
             />
             <XAxis dataKey="heat" type="number" hide />
@@ -54,7 +61,7 @@ export function BarometerSidebar() {
               cursor={{ fill: "hsl(var(--accent))" }}
               content={<ChartTooltipContent hideLabel />}
             />
-            <Bar dataKey="heat" radius={5} fill="hsl(var(--primary))" />
+            <Bar dataKey="heat" radius={5} fill="#EC1B25" />
           </BarChart>
         </ChartContainer>
       </CardContent>
