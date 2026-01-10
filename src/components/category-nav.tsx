@@ -42,13 +42,16 @@ export function CategoryNav() {
                   asChild 
                   variant="ghost" 
                   key={category} 
-                  className={cn(
-                    "rounded-full px-4 text-sm font-semibold transition-colors shrink-0",
-                    activeCategory === category 
-                      ? 'bg-primary text-primary-foreground hover:bg-primary/90' 
-                      : 'text-muted-foreground hover:text-primary hover:bg-background/50',
-                    index === CATEGORIES.length - 1 && 'mr-4'
-                  )}
+                 className={cn(
+  "rounded-full px-4 text-sm font-semibold shrink-0",
+  "transition-all duration-300 ease-out transform hover:scale-105",
+  activeCategory === category
+    ? "bg-black text-white hover:bg-black hover:text-white"
+    : "text-black hover:text-white hover:bg-black",
+  index === CATEGORIES.length - 1 && "mr-4"
+)}
+
+
                   onClick={() => setActiveCategory(category)}
                 >
                   <Link href={`/article/${randomArticleSlugs[category]}`}>{category}</Link>
