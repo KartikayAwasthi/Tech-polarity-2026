@@ -41,10 +41,12 @@ export default function Home() {
             <div className="sticky top-8 space-y-8">
               <BarometerSidebar />
               <TrendingStories />
+              <TrendingStories/>
             </div>
           </aside>
         </div>
         <TrendingStoriesBottom />
+        
       </main>
       <Footer />
     </div>
