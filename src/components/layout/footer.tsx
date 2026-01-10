@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Youtube, Instagram, Mail, Info, Shield, Send, Facebook, X } from 'lucide-react';
 
+
 const LogoIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
     {...props}
@@ -28,13 +29,7 @@ const LogoIcon = (props: React.SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
-const LogoText = (props: React.SVGProps<SVGSVGElement>) => (
-    <svg {...props} viewBox="0 0 200 24" xmlns="http://www.w3.org/2000/svg">
-        <text x="0" y="19" fontFamily="Poppins, sans-serif" fontSize="24" fontWeight="900" fill="hsl(var(--foreground))" letterSpacing="-0.5">
-            TECHPOLARITY
-        </text>
-    </svg>
-);
+
 
 export function Footer() {
   return (
@@ -44,20 +39,33 @@ export function Footer() {
             <div className="text-center md:text-left">
                 <Link href="/" className="flex items-center gap-2 justify-center md:justify-start">
                     <div className="flex items-center justify-center">
-                      <LogoIcon className="w-10 h-5" />
+                     
                     </div>
-                    <LogoText className="h-5 -ml-2" />
+                  
                 </Link>
-                <p className="text-muted-foreground mt-2">Technology is best when it <br/> brings people together</p>
+               
             </div>
-            <div className="my-8 md:my-0 relative w-full max-w-sm flex items-center justify-center">
-                <svg viewBox="0 0 300 10" width="100%" height="10" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute top-1/2 left-0 w-full -translate-y-1/2">
-                    <path d="M0 5 L300 5" stroke="hsl(var(--border))" stroke-width="1" stroke-dasharray="2 4" stroke-linecap="round"/>
-                </svg>
-                <div className="absolute right-0 top-1/2 -translate-y-1/2 -mr-3 bg-primary p-2 rounded-full">
-                   <Send className="w-4 h-4 text-primary-foreground" />
-                </div>
-            </div>
+         <div className="w-full flex justify-center gap-6">
+  {/* Left: Logo + Text */}
+  <div className="flex flex-col items-start">
+    <img
+      src="/logo_footer.png"
+      alt="TechPolarit Footer Logo"
+      className="h-auto w-auto object-contain"
+      draggable={false}
+    />
+    <p className="text-muted-foreground text mt-1 leading-tight ">
+      Technology is best when it <br /> brings people together
+    </p>
+  </div>
+
+  
+
+  
+</div>
+
+
+
             <div className="flex items-center justify-center space-x-2">
                 <Button asChild variant="outline" size="icon" className="rounded-full">
                     <a href="#" aria-label="Facebook">
